@@ -1,0 +1,19 @@
+---
+- :hostname: 'chefserver.example.com'
+  :memory: 2048
+  :ip: '192.168.10.100'
+  :scripts:
+    - 'install_chefserver.sh'
+
+- :hostname: 'devbox.example.com'
+  :ip: '192.168.10.101'
+  :primary: true
+  :scripts:
+    - 'install_chefdk.sh'
+  :shared_folders:
+    - :host_folder: '~/src/'
+      :guest_folder: '/root/src'
+
+- :hostname: 'node.example.com'
+  :ip: '192.168.10.102'
+

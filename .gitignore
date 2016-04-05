@@ -1,0 +1,6 @@
+**/builds/*
+**/packer_cache/*
+**/.vagrant/*
+**/.DS_Store
+**/*.swp
+
