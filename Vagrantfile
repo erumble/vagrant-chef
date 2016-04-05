@@ -49,7 +49,7 @@ Vagrant.configure(vagrantfile_api_version) do |config|
 
       # allow guest os to use host os ssh keys
       box.ssh.forward_agent = true
-  
+
       # run additional scripts
       (vm_def[:scripts] || []).each do |script|
         box.vm.provision 'shell', path: "#{script_dir}/#{script}"
